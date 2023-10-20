@@ -24,9 +24,9 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		j++;
 		info->cmd_buf_type = CMD_AND;
 	}
-	else if (buf[j] == ';') /* found at end of this command */
+	else if (buf[j] == ';')
 	{
-		buf[j] = 0; /* replace the semicolon with null */
+		buf[j] = 0; 
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
@@ -73,7 +73,6 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
  * @info: ...
  * Return: ...
  */
-
 int replaces_alias(info_t *info)
 {
 	int i;

@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * is_chain - test if current char in buffer is a chain delimeter
- * @info: the parameter struct
- * @buf: the char buffer
- * @p: address of current position in buf
- *
- * Return: 1 if chain delimeter, 0 otherwise
+ * is_chain - ...
+ * @info: ...
+ * @buf: ...
+ * @p: ...
+ * Return: ...
  */
+
 int is_chain(info_t *info, char *buf, size_t *p)
 {
 	size_t j = *p;
@@ -36,15 +36,14 @@ int is_chain(info_t *info, char *buf, size_t *p)
 }
 
 /**
- * check_chain - checks we should continue chaining based on last status
- * @info: the parameter struct
- * @buf: the char buffer
- * @p: address of current position in buf
- * @i: starting position in buf
- * @len: length of buf
- *
- * Return: Void
+ * check_chain - ...
+ * @info: ...
+ * @buf: ...
+ * @p: ...
+ * @i: ...
+ * @len: ...
  */
+
 void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {
 	size_t j = *p;
@@ -70,11 +69,11 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 }
 
 /**
- * replace_alias - replaces an aliases in the tokenized string
- * @info: the parameter struct
- *
- * Return: 1 if replaced, 0 otherwise
+ * replace_alias - ...
+ * @info: ...
+ * Return: ...
  */
+
 int replace_alias(info_t *info)
 {
 	int i;
@@ -99,11 +98,11 @@ int replace_alias(info_t *info)
 }
 
 /**
- * replace_vars - replaces vars in the tokenized string
- * @info: the parameter struct
- *
- * Return: 1 if replaced, 0 otherwise
+ * replace_vars - ...
+ * @info: ...
+ * Return: ...
  */
+
 int replace_vars(info_t *info)
 {
 	int i = 0;
@@ -140,12 +139,12 @@ int replace_vars(info_t *info)
 }
 
 /**
- * replace_string - replaces string
- * @old: address of old string
- * @new: new string
- *
- * Return: 1 if replaced, 0 otherwise
+ * replace_string - ...
+ * @old: ...
+ * @new: ...
+ * Return: ...
  */
+
 int replace_string(char **old, char *new)
 {
 	free(*old);

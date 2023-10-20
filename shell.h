@@ -180,8 +180,8 @@ int _cd(info_t *);
 int _help(info_t *);
 
 /* toem_builtin1.c */
-int _myhistory(info_t *);
-int _myalias(info_t *);
+int _history(info_t *);
+int _alias(info_t *);
 
 /*toem_getline.c */
 ssize_t get_input(info_t *);

@@ -24,9 +24,9 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		j++;
 		info->cmd_buf_type = CMD_AND;
 	}
-	else if (buf[j] == ';') /* found end of this command */
+	else if (buf[j] == ';') /* found at end of this command */
 	{
-		buf[j] = 0; /* replace semicolon with null */
+		buf[j] = 0; /* replace the semicolon with null */
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
@@ -74,7 +74,7 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
  * Return: ...
  */
 
-int replace_alias(info_t *info)
+int replaces_alias(info_t *info)
 {
 	int i;
 	list_t *node;
@@ -125,7 +125,7 @@ int replace_vars(info_t *info)
 				_strdup(convert_number(getpid(), 10, 0)));
 			continue;
 		}
-		node = node_starts_with(info->env, &info->argv[i][1], '=');
+		node = node_starts_with_the(info->env, &info->argv[i][1], '=');
 		if (node)
 		{
 			replace_string(&(info->argv[i]),

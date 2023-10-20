@@ -24,9 +24,15 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		j++;
 		info->cmd_buf_type = CMD_AND;
 	}
+<<<<<<< HEAD
 	else if (buf[j] == ';'	
 	{
 		buf[j] = 0;
+=======
+	else if (buf[j] == ';')
+	{
+		buf[j] = 0; 
+>>>>>>> d106ea6f107dcbd2fa562d947118e4aaa3654daf
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
@@ -73,7 +79,6 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
  * @info: ...
  * Return: ...
  */
-
 int replaces_alias(info_t *info)
 {
 	int i;
